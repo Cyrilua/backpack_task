@@ -3,6 +3,7 @@
 # — вес и ценность. И есть рюкзак, определенной вместимости.
 # Задача заключается в том, чтобы собрать рюкзак с максимальной ценностью предметов внутри,
 # соблюдая при этом весовое ограничение рюкзака.
+import time
 from logic import get_selected_items_list
 
 
@@ -99,4 +100,7 @@ if __name__ == '__main__':
     #                '3': (50, 100)}
 
     print('Предметы для оптимальной укладки рюкзака:')
+    start_time = time.time()
     print(get_selected_items_list(items_dict, weight_limit))
+    print('Максимальный вес рюкзака = {0}'.format(weight_limit))
+    print("--- %s seconds ---" % (time.time() - start_time))
